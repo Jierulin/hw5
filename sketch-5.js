@@ -37,25 +37,24 @@ function paint(circle) {
 
 function move(circle) {
 	circle.x += random(-10,10);
-  circle.x += circle.vx; // circle.x = circle.x + circle.vx
   circle.y += circle.vy;
 }
 
 function reset(circle) {
   if (circle.x > width || circle.x < 0) {
     circle.vx = - circle.vx;
-	
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    circle.x+=50;
-  } else if (keyCode === RIGHT_ARROW) {
-   circle.x+=50;
-  }
-}
-		
-  }
+	}
   if (circle.y <0 ) {
     
 		circle.y=400;
+  }
+
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    circle.yv+=100;
+  } else if (keyCode === DOWN_ARROW) {
+   circle.yv-=100;
   }
 }
