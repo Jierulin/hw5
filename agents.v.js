@@ -1,3 +1,5 @@
+//these codes do the task for assignment i,ii,iii,v (not yet for assignment iv)
+
 var agents = [];
 
 function setup() {
