@@ -1,0 +1,9 @@
+background(0);
+fill(255);
+noStroke();
+
+var count=0
+while(count<=1000){
+ellipse(random(350),random(350),random(4),random(4));
+  count+=1
+}
