@@ -16,9 +16,9 @@ function draw() {
  	colorMode(HSB);
 	rectMode(CENTER);
   background(220);
-  
   agents.forEach(activateAgent);
   agents.forEach(drawAgent);
+	append (drawAgent,"onemore"
 }
 
 function drawAgent(agent) {
@@ -35,6 +35,22 @@ function drawAgent(agent) {
   rect(0, 0, 2, 2);
   pop();
 }
+
+function onemore(agent) {
+	push();
+  translate(agent.x, agent.y);
+  rotate(agent.angle);
+    stroke(0);
+	stroke(200,100,100);
+  fill(200,100,100);
+  rect(mouseX, mouseY, 20, 10);
+	stroke(200,100,50);
+  fill(200,100,50);
+
+  rect(mouseX, mouseY, 2, 2);
+  pop();
+}
+
 
 function activateAgent(agent) {
   if (random(100) < 1) {
@@ -61,4 +77,14 @@ function activateAgent(agent) {
       agent.y = height;
     }
   }
+}
+
+function isClickedOn(agents){
+	if(dist(mouseX,mouseY,agents.x,agents.y)<10){
+	agents.angle=0;
+	}
+}
+	
+function mousePressed(){
+	agents.forEach(isClickedOn);
 }
