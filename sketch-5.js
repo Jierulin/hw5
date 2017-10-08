@@ -30,8 +30,7 @@ function draw() {
   reset(circle);
   reset(circle2);
 	
-	keyPressed(circle);
-  keyPressed(circle2);
+	
 }
 
 function paint(circle) {
@@ -39,7 +38,7 @@ function paint(circle) {
 }
 
 function move(circle) {
-	circle.x += random(-10,10);
+
   circle.y += circle.vy;
 }
 
@@ -54,10 +53,11 @@ function reset(circle) {
 
 }
 
-function keyPressed(circle) {
+function keyPressed() {
   if (keyCode === UP_ARROW) {
-    circle.vy=circle.vy+1000;
-  } else if (keyCode === DOWN_ARROW) {
-   circle.vy=circle.vy-1000;
+    circle.vy=circle.vy+50;
+  } 
+	if (keyCode === DOWN_ARROW) {
+   circle.vy=circle.vy-50;
   }
 }
