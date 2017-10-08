@@ -7,7 +7,6 @@ function setup() {
     
   for (var i = 0; i < sizes.length; i += 1) {
     fill(15,100,100);
-    ellipse(50+i*80, height/2, sizes[i], sizes[i]);
+    ellipse(20+i*80, height/2, sizes[i], sizes[i]);
   }
 }
-
