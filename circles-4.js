@@ -1,4 +1,4 @@
-//circles are not moving, instead, all frames of animation are draw on the canvas??
+
 
 
 
@@ -13,6 +13,7 @@ function setup() {
 }
 
 function draw(){
+	background(255)
 	h=height/2+random(-10,10);
 	for (var i = 0; i < sizes.length; i += 1) {		
     fill(15,100,100);
