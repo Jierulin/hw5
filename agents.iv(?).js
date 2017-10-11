@@ -1,5 +1,3 @@
-//append???
-
 var agents = [];
 
 function setup() {
@@ -20,7 +18,7 @@ function draw() {
   background(220);
   agents.forEach(activateAgent);
   agents.forEach(drawAgent);
-	append (drawAgent,"onemore"
+	
 }
 
 function drawAgent(agent) {
@@ -88,5 +86,12 @@ function isClickedOn(agents){
 }
 	
 function mousePressed(){
-	agents.forEach(isClickedOn);
+	append(agents,{
+		x:mouseX,
+		y:mouseY,
+		angle:random(TWO_PI),
+		state:floor(random(3)),
+		h:random(0,360)
+	});	
 }
+	
