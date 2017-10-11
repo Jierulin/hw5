@@ -1,5 +1,3 @@
-//these codes do the task for assignment i,ii,iii,v (not yet for assignment iv)
-
 var agents = [];
 
 function setup() {
@@ -73,4 +71,12 @@ function isClickedOn(agents){
 	
 function mousePressed(){
 	agents.forEach(isClickedOn);
+}
+
+function resetAngle(agent){
+	agent.angle=0;
+}
+
+function keyPressed(){
+	agents.forEach(resetAngle);
 }
