@@ -26,11 +26,11 @@ function drawAgent(agent) {
   translate(agent.x, agent.y);
   rotate(agent.angle);
     stroke(0);
-	stroke(200,100,100);
-  fill(200,100,100);
+	noStroke();
+  fill(agent.x,agent.y,300);
   rect(0, 0, 20, 10);
-	stroke(200,100,50);
-  fill(200,100,50);
+	stroke(agent.x,agent.y,80);
+  fill(agent.x,agent.y,80);
 
   rect(0, 0, 2, 2);
   pop();
